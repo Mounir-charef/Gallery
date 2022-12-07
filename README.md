@@ -1,3 +1,3 @@
 # Gallery
 A simple gallery built using vanilla-js <br/>
-(check it here)[https://lolifmaster.github.io/Gallery/]
+[https://lolifmaster.github.io/Gallery/](check it here)
