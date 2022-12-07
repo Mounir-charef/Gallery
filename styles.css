@@ -2,9 +2,12 @@ body {
     margin: 0;
     background-color: #252525;
     height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
+    overflow-scrolling: unset;
 }
 
 #gallery-wrap > .img {
@@ -19,10 +22,8 @@ body {
 #gallery-wrap{
     display: flex;
     gap: 2vmin;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    translate: 0 -50%;
-    /*transform: translate(0, -50%);*/
+    translate: 20% 0;
+    /*transform: translate(20%, 0);*/
     user-select: none;
+    overflow: hidden;
 }

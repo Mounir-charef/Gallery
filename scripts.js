@@ -2,7 +2,7 @@ const tracker = document.getElementById('gallery-wrap'),
     images = document.getElementsByClassName('img');
 
 let trackerPercentage = 0,
-    trackerLastPercentage = 0,
+    trackerLastPercentage = 30,
     trackerPosition = 0;
 
 
@@ -20,13 +20,13 @@ const actionMove = e => {
 
     const moved =  e.clientX - trackerPosition,
         percentage = (moved / (window.innerWidth / 2)) * 100 + trackerLastPercentage,
-        correctPercentage = Math.max(Math.min(percentage, 0), -100),
-        imgPos = correctPercentage + 100;
+        correctPercentage = Math.max(Math.min(percentage, 20), -80),
+        imgPos = correctPercentage + 80;
 
     trackerPercentage = correctPercentage
 
     tracker.animate({
-        translate: `${correctPercentage}% -50%`
+        translate: `${correctPercentage}% 0`
     },{duration: 1500, fill: 'forwards'})
 
     for(const image of images){
